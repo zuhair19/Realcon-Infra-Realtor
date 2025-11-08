@@ -11,14 +11,16 @@ import HomeLoanPartners from "@/components/HomeLoanPartners";
 import { useEffect } from 'react';
 
 export default function Page(){
-  useEffect(()=>{
-    if(!sessionStorage.getItem('popupShown')){
-      setTimeout(()=>{
-        document.dispatchEvent(new CustomEvent('open-enquiry'));
-      }, 25000);
-      sessionStorage.setItem('popupShown','true');
-    }
-  },[]);
+
+  // Opens Enquiry Modal after 25 seconds (only once per session)
+  // useEffect(()=>{
+  //   if(!sessionStorage.getItem('popupShown')){
+  //     setTimeout(()=>{
+  //       document.dispatchEvent(new CustomEvent('open-enquiry'));
+  //     }, 25000);
+  //     sessionStorage.setItem('popupShown','true');
+  //   }
+  // },[]);
 
   return (
     <>
