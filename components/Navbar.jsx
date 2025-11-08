@@ -16,6 +16,17 @@ export default function Navbar(){
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   },[lastY]);
+  useEffect(() => {
+    if (!open) return;
+    let last = window.scrollY;
+    const onScrollClose = () => {
+      if (Math.abs(window.scrollY - last) > 10) setOpen(false);
+      last = window.scrollY;
+    };
+    window.addEventListener('scroll', onScrollClose, { passive: true });
+    return () => window.removeEventListener('scroll', onScrollClose);
+  }, [open]);
+
 
   return (
     <header className={`sticky top-0 z-50 bg-white border-b border-neutral-200 transition-transform ${hide ? '-translate-y-full':''}`}>
@@ -36,18 +47,41 @@ export default function Navbar(){
         </div>
         <button className="btn md:hidden" onClick={()=>setOpen(!open)} aria-label="Toggle menu">☰</button>
       </div>
+
       {open && (
-        <div className="container-app md:hidden pb-4">
-          <div className="grid gap-2">
-            <a href="/">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-            <button className="btn btn-primary" onClick={()=>document.dispatchEvent(new CustomEvent('open-enquiry'))}>Enquire Now</button>
+        <>
+          {/* Backdrop (clicking it closes the menu) */}
+          <div
+            className="fixed inset-0 z-40 md:hidden"
+            onClick={() => setOpen(false)}
+            aria-hidden="true"
+          />
+
+          {/* Floating panel on right half */}
+          <div
+            className="fixed top-16 right-0 z-50 w-2/5 max-w-xs bg-white/50 shadow-lg p-4 md:hidden transition-transform"
+            onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+          >
+            <div className="grid gap-3 justify-center">
+              <a href="/" onClick={() => setOpen(false)}>Home</a>
+              <a href="#about" onClick={() => setOpen(false)}>About</a>
+              <a href="#projects" onClick={() => setOpen(false)}>Projects</a>
+              <a href="#gallery" onClick={() => setOpen(false)}>Gallery</a>
+              <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  document.dispatchEvent(new CustomEvent('open-enquiry'));
+                  setOpen(false);
+                }}
+              >
+                Enquire Now
+              </button>
+            </div>
           </div>
-        </div>
+        </>
       )}
+
     </header>
   )
 }
