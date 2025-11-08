@@ -59,7 +59,7 @@ export default function Navbar(){
 
           {/* Floating panel on right half */}
           <div
-            className="fixed top-16 right-0 z-50 w-2/5 max-w-xs bg-white/50 shadow-lg p-4 md:hidden transition-transform"
+            className="fixed top-16 right-0 z-50 w-2/5 max-w-xs bg-white/50 shadow-lg p-4 md:hidden transition-transform rounded-bl-lg"
             onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
           >
             <div className="grid gap-3 justify-center">
