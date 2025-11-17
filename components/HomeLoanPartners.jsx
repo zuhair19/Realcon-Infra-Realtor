@@ -24,7 +24,7 @@ export default function HomeLoanPartners() {
         <div className="w-20 h-1 bg-green-500 mx-auto mt-2 mb-6 rounded-full" />
 
         <p className="max-w-3xl mx-auto text-gray-600 mb-8 px-4">
-          For the convenience of clients, Realcon Infra Realtor Pvt. Ltd. has its
+          For the convenience of clients, Realcon Infra Realtor has its
           own Banking & Financial Assistance team, who assist buyers in planning
           their loan amount and term, and help them choose the right financial
           institution according to their monetary needs.

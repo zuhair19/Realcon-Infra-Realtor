@@ -40,8 +40,8 @@ const AnimatedNumber = ({ value, duration = 2000 }) => {
 };
 
 const Stat = ({ num, label }) => (
-  <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 shadow-sm">
-    <div className="text-2xl md:text-3xl text-slate-800 whitespace-nowrap">
+  <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 shadow-2xl">
+    <div className="text-2xl md:text-3xl whitespace-nowrap">
       <AnimatedNumber value={num} />
     </div>
     <div className="leading-tight">
@@ -53,7 +53,7 @@ const Stat = ({ num, label }) => (
 
 export default function Counters() {
   return (
-    <div className="grid grid-cols-2 gap-3 md:gap-5">
+    <div className="grid grid-cols-2 gap-3 md:gap-5 mx-auto py-20">
       <Stat num="600+" label={"Happy Families"} />
       <Stat num="150+" label={"Registries Done"} />
       <Stat num="15+" label={"years of Building Trust"} />

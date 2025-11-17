@@ -130,7 +130,6 @@ export default function Navbar() {
       <div
         className={`fixed inset-0 z-40 bg-black/40 md:hidden transition-opacity duration-300 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
         onClick={() => setOpen(false)}
-        aria-hidden="true"
       />
 
       {/* PANEL (always mounted so it can slide in/out) */}
@@ -200,12 +199,8 @@ export default function Navbar() {
 
                       {openOngoing && (
                         <ul className="mt-2 space-y-2 pl-3 text-sm">
-                          <li><a href="/panache-villas" onClick={() => setOpen(false)}>Escon Panache Villas</a></li>
-                          <li><a href="/escon-plots-150" onClick={() => setOpen(false)}>Escon Plots 150</a></li>
-                          <li><a href="/escon-galaxy-III-tower-g4" onClick={() => setOpen(false)}>Escon Galaxy - III Tower G4</a></li>
-                          <li><a href="/escon-galaxy-IV-tower-g5-g6" onClick={() => setOpen(false)}>Escon Galaxy - IV Tower G5 &amp; G6</a></li>
-                          <li><a href="/pride-arcade" onClick={() => setOpen(false)}>Pride Arcade</a></li>
-                          <li><a href="/park-view-arcade" onClick={() => setOpen(false)}>Park View Arcade</a></li>
+                          <li><a href="/antilla-tower-1" onClick={() => setOpen(false)}>Antilla Tower 1<br />Sector 107 Noida</a></li>
+                          <li><a href="/silver-oak-tower" onClick={() => setOpen(false)}>Silver Oak Tower<br />Sector 104<br />near Sterling Mall</a></li>
                         </ul>
                       )}
                     </div>
@@ -226,9 +221,9 @@ export default function Navbar() {
                       {openDelivered && (
                         <ul className="mt-2 space-y-2 pl-3 text-sm">
                           {/* Put delivered project links here */}
-                          <li><a href="/delivered/project-1" onClick={() => setOpen(false)}>Delivered Project 1</a></li>
-                          <li><a href="/delivered/project-2" onClick={() => setOpen(false)}>Delivered Project 2</a></li>
-                          <li><a href="/delivered/project-3" onClick={() => setOpen(false)}>Delivered Project 3</a></li>
+                          <li><a href="/dream-height-1" onClick={() => setOpen(false)}>Dream Height 1</a></li>
+                          <li><a href="/dream-height-2" onClick={() => setOpen(false)}>Dream Height 2</a></li>
+                          <li><a href="/dream-height-3" onClick={() => setOpen(false)}>Dream Height 3</a></li>
                         </ul>
                       )}
                     </div>
