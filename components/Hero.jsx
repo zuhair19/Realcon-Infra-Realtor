@@ -11,7 +11,7 @@ export default function Hero(){
       <video autoPlay playsInline loop muted className="w-full h-[55vh] md:h-[70vh] object-cover block">
         <source src="/videos/realcon_infra_video.mp4" type="video/mp4" />
       </video>
-      <span className="absolute left-5 bottom-5 bg-black/50 text-white px-3 py-1 rounded">Realconn Infra Realtors</span>
+      <span className="absolute left-5 bottom-5 bg-black/50 text-white px-3 py-1 rounded">Realcon Infra Realtor</span>
     </section>
   );
 }

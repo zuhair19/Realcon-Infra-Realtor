@@ -55,8 +55,8 @@ export default function Counters() {
   return (
     <div className="grid grid-cols-2 gap-3 md:gap-5">
       <Stat num="600+" label={"Happy Families"} />
-      <Stat num="625+" label={"Registries Done"} />
-      <Stat num="3L+" label={"Sq.ft. Construction delivered"} />
+      <Stat num="150+" label={"Registries Done"} />
+      <Stat num="15+" label={"years of Building Trust"} />
       <Stat num="700+" label={"Units sold till date"} />
     </div>
   );

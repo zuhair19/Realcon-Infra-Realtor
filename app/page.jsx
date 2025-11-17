@@ -11,7 +11,7 @@ import HomeLoanPartners from "@/components/HomeLoanPartners";
 import { Analytics } from "@vercel/analytics/next"
 import { useEffect } from 'react';
 
-export default function Page(){
+export default function Page() {
 
   // Opens Enquiry Modal after 25 seconds (only once per session)
   // useEffect(()=>{
@@ -31,7 +31,7 @@ export default function Page(){
       <section id="about" className="section">
         <div className="container-app grid md:grid-cols-2 gap-6">
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold">Realcon Infra Realtor Pvt. Ltd.</h1>
+            <h1 className="text-2xl md:text-3xl font-bold mb-2">Realcon Infra Realtor</h1>
             <p className="mt-2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatibus laborum delectus praesentium pariatur earum quasi doloremque consequuntur fugiat doloribus?
             </p>
@@ -48,11 +48,11 @@ export default function Page(){
 
       <div className="fixed md:hidden left-0 bottom-0 w-full flex gap-1 p-1 bg-accent z-50">
         <a className="btn btn-warning flex-1" href="https://api.whatsapp.com/send?phone=1234567890&text=Hi">WhatsApp</a>
-        <a className="btn btn-warning flex-1" href="tel:+9112345678">Tap To Call</a>
-        <button className="btn btn-primary flex-1" onClick={()=>document.dispatchEvent(new CustomEvent('open-enquiry'))}>Enquire Now</button>
+        <a className="btn btn-warning flex-1" href="tel:+911204553111">Tap To Call</a>
+        <button className="btn btn-primary flex-1" onClick={() => document.dispatchEvent(new CustomEvent('open-enquiry'))}>Enquire Now</button>
       </div>
 
-      <button className="fixed right-4 bottom-24 md:bottom-6 rounded-full bg-black text-white w-11 h-11 shadow-lg" onClick={()=>window.scrollTo({top:0,behavior:'smooth'})}>↑</button>
+      <button className="fixed right-4 bottom-24 md:bottom-6 rounded-full bg-black text-white w-11 h-11 shadow-lg" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>↑</button>
       <HomeLoanPartners />
       <EnquiryModal />
       <Footer />

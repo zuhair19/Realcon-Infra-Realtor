@@ -1,5 +1,5 @@
 "use client";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube, FaPhoneAlt, FaEnvelope,FaMapMarkedAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container-app">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div>
-            <h4 className="font-semibold mb-2">Navigation</h4>
+            <h4 className="font-bold mb-2">Navigation</h4>
             <ul className="[&>li]:leading-7">
               <li><a href="/">Home</a></li>
               <li><a href="#about">About Us</a></li>
@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-2">Useful Links</h4>
+            <h4 className="font-bold mb-2">Useful Links</h4>
             <ul className="[&>li]:leading-7">
               {/* <li><a href="#blogs">Blogs</a></li> */}
               <li><a href="#">Privacy Policy</a></li>
@@ -27,25 +27,35 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-2">Ongoing Projects</h4>
+            <h4 className="font-bold mb-2">Ongoing Projects</h4>
             <ul className="[&>li]:leading-7">
-              <li><a href="#projects">Project 1</a></li>
-              <li><a href="#projects">Project 2</a></li>
-              <li><a href="#projects">Project 3</a></li>
-              <li><a href="#projects">Project 4</a></li>
+              <li><a href="#projects">Antilla Tower 1</a></li>
+              <li><a href="#projects">Silver Oak Tower</a></li>
+            </ul>
+            <h4 className="font-bold mt-3 mb-2">Delivered Projects</h4>
+            <ul className="[&>li]:leading-7">
+              <li><a href="#projects">Dream Height 1</a></li>
+              <li><a href="#projects">Dream Height 2</a></li>
+              <li><a href="#projects">Dream Height 3</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-2">Corporate Office</h4>
-            <p>
-              Realcon Infra Realtor Pvt. Ltd.<br />
-              Address line<br />
-              State, Pincode
+            <h4 className="font-bold mb-2">Head Office</h4>
+            <p className="inline-flex items-center gap-2"><FaMapMarkedAlt className="text-lg shrink-0" />
+              Realcon Infra Realtor<br />
+              B-47, 3rd floor<br />
+              Sector-64, Noida<br />
             </p>
             <p className="mt-2">
-              Tel: <a href="tel:+91123456789">+91 123456789</a><br />
-              Email: <a href="mailto:123@realconinfra.com">123@realconinfra.com</a>
+              <a href="tel:+911204553111" className="inline-flex items-center gap-2 hover:text-blue-500">
+                <FaPhoneAlt className="text-lg shrink-0" />
+                +91 120 455 3111
+              </a><br />
+              <a href="mailto:info@realconinfrarealtors.com" className="inline-flex items-center gap-2 hover:text-blue-500 break-all">
+                <FaEnvelope className="text-lg shrink-0" />
+                info@realconinfrarealtors.com
+              </a>
             </p>
           </div>
         </div>
@@ -54,7 +64,7 @@ export default function Footer() {
 
         <div className="flex items-center justify-between gap-3 flex-wrap">
           <p className="text-sm md:text-base">
-            © {new Date().getFullYear()} Realcon Infra Realtor Pvt. Ltd. All Rights Reserved.
+            © {new Date().getFullYear()} Realcon Infra Realtor. All Rights Reserved.
           </p>
 
           <div className="flex gap-3">
