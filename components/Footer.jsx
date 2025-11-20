@@ -10,7 +10,7 @@ export default function Footer() {
             <h4 className="font-bold mb-2">Navigation</h4>
             <ul className="[&>li]:leading-7">
               <li><a href="/">Home</a></li>
-              <li><a href="#about">About Us</a></li>
+              <li><a href="/about">About Us</a></li>
               <li><a href="#gallery">Gallery</a></li>
               <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -29,14 +29,19 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-2">Ongoing Projects</h4>
             <ul className="[&>li]:leading-7">
-              <li><a href="#projects">Antilla Tower 1</a></li>
-              <li><a href="#projects">Silver Oak Tower</a></li>
+              <li><a href="/projects/antilla-tower-1">Antilla Tower 1</a></li>
+              <li><a href="/projects/silver-oak-tower">Silver Oak Tower</a></li>
             </ul>
             <h4 className="font-bold mt-3 mb-2">Delivered Projects</h4>
             <ul className="[&>li]:leading-7">
-              <li><a href="#projects">Dream Height 1</a></li>
+              {/* <li><a href="#projects">Dream Height 1</a></li>
               <li><a href="#projects">Dream Height 2</a></li>
-              <li><a href="#projects">Dream Height 3</a></li>
+              <li><a href="#projects">Dream Height 3</a></li> */}
+
+
+              <li><p>Dream Height 1</p></li>
+              <li><p>Dream Height 2</p></li>
+              <li><p>Dream Height 3</p></li>
             </ul>
           </div>
 

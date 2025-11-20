@@ -2,9 +2,10 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 const ongoing = [
-  { title: 'Silver Oak Tower', img: '/images/silver-oak.jpg' },
+  { title: 'Silver Oak Tower', img: '/images/silver-3.jpg' },
   { title: 'Antilla Tower 1', img: '/images/antilla-1.jpg' },
 ];
 
@@ -14,13 +15,13 @@ const delivered = [
   { title: 'Dream Heights 3', img: '/images/dream-3.jpg' },
 ];
 
-export default function Projects(){
-  useEffect(()=>{ AOS.init({ once:true, duration:700 }); },[]);
+export default function Projects() {
+  useEffect(() => { AOS.init({ once: true, duration: 700 }); }, []);
 
   return (
     <section id="projects" className="section py-16">
       <div className="container-app">
-        
+
         {/* Heading */}
         <div className="text-center mb-6">
           <h3 className="text-2xl md:text-3xl font-bold">Find Your Dream Space</h3>
@@ -33,9 +34,11 @@ export default function Projects(){
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {ongoing.map((item, idx) => (
-            <div
+            <Link
               key={idx}
-              className="relative rounded-xl overflow-hidden shadow-md h-72"
+              href={`/projects/${item.title.replace(/\s+/g, '-').toLowerCase()}`}
+              className="relative rounded-xl overflow-hidden shadow-md h-72 block"
+
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >
@@ -51,7 +54,7 @@ export default function Projects(){
                   <h5 className="text-lg font-semibold text-center">{item.title}</h5>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

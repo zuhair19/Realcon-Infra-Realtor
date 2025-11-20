@@ -8,6 +8,7 @@ import Counters from '@/components/Counters';
 import EnquiryModal from '@/components/EnquiryModal';
 import Footer from '@/components/Footer';
 import HomeLoanPartners from "@/components/HomeLoanPartners";
+import Mob_contact from '@/components/Mob_contact';
 import { Analytics } from "@vercel/analytics/next"
 import { useEffect } from 'react';
 
@@ -44,16 +45,16 @@ export default function Page() {
       </section>
 
       <WhyUs />
-      <Projects />
+      <section id="projects" className="section pb-0">
+        <Projects />
+      </section>
 
-      <div className="fixed md:hidden left-0 bottom-0 w-full flex gap-1 p-1 bg-accent z-50">
-        <a className="btn btn-warning flex-1" href="https://api.whatsapp.com/send?phone=1234567890&text=Hi">WhatsApp</a>
-        <a className="btn btn-warning flex-1" href="tel:+911204553111">Tap To Call</a>
-        <button className="btn btn-primary flex-1" onClick={() => document.dispatchEvent(new CustomEvent('open-enquiry'))}>Enquire Now</button>
-      </div>
+      <Mob_contact />
 
       <button className="fixed right-4 bottom-14 md:bottom-6 rounded-full bg-black text-white w-11 h-11 shadow-lg" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>↑</button>
-      <HomeLoanPartners />
+      <section id="loan" className="section">
+        <HomeLoanPartners />
+      </section>
       <EnquiryModal />
       <Footer />
     </>

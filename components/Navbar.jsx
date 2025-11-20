@@ -58,13 +58,13 @@ export default function Navbar() {
         {/* DESKTOP NAV (replace your existing md:flex nav with this) */}
         <nav className="hidden md:flex items-center gap-6 relative">
           <a className="py-2 hover:text-brand" href="/">Home</a>
-          <a className="py-2 hover:text-brand" href="#about">About</a>
+          <a className="py-2 hover:text-brand" href="/about">About</a>
 
           {/* Projects with dropdown */}
           {/* Projects with dropdown — desktop (replace prior desktop block) */}
           <div className="relative group">
             <button
-              className="py-2 flex items-center gap-2 hover:text-brand focus:outline-none"
+              className="py-2 flex items-center gap-1 hover:text-brand focus:outline-none"
               aria-haspopup="true"
               aria-expanded="false"
               type="button"
@@ -82,8 +82,8 @@ export default function Navbar() {
                 <div className="px-4 py-2">
                   <div className="font-semibold text-sm mb-2">Ongoing Projects</div>
                   <ul className="space-y-1 text-sm">
-                    <li><a className="block px-2 py-1 hover:text-brand" href="/antilla-tower-1">Antilla Tower 1<br />Sector 107 Noida</a></li>
-                    <li><a className="block px-2 py-1 hover:text-brand" href="/silver-oak-tower">Silver Oak Tower<br />Sector 104<br />near Sterling Mall</a></li>
+                    <li><a className="block px-2 py-1 hover:text-brand" href="/projects/antilla-tower-1">Antilla Tower 1<br />Sector 107 Noida</a></li>
+                    <li><a className="block px-2 py-1 hover:text-brand" href="/projects/silver-oak-tower">Silver Oak Tower<br />Sector 104<br />near Sterling Mall</a></li>
                   </ul>
                 </div>
 
@@ -93,9 +93,14 @@ export default function Navbar() {
                 <div className="px-4 py-2">
                   <div className="font-semibold text-sm mb-2">Delivered Projects</div>
                   <ul className="space-y-1 text-sm">
-                    <li><a className="block px-2 py-1 hover:text-brand" href="/dream-height-1">Dream Height 1</a></li>
-                    <li><a className="block px-2 py-1 hover:text-brand" href="/dream-height-2">Dream Height 2</a></li>
-                    <li><a className="block px-2 py-1 hover:text-brand" href="/dream-height-3">Dream Height 3</a></li>
+                    {/* <li><a className="block px-2 py-1 hover:text-brand" href="/projects/dream-height-1">Dream Height 1</a></li>
+                    <li><a className="block px-2 py-1 hover:text-brand" href="/projects/dream-height-2">Dream Height 2</a></li>
+                    <li><a className="block px-2 py-1 hover:text-brand" href="/projects/dream-height-3">Dream Height 3</a></li> */}
+
+
+                    <li><p className="block px-2 py-1">Dream Height 1</p></li>
+                    <li><p className="block px-2 py-1">Dream Height 2</p></li>
+                    <li><p className="block px-2 py-1">Dream Height 3</p></li>
                   </ul>
                 </div>
               </div>
@@ -104,9 +109,8 @@ export default function Navbar() {
 
 
           <a className="py-2 hover:text-brand" href="#gallery">Gallery</a>
-          <a className="py-2 hover:text-brand" href="#contact">Contact</a>
+          <a className="py-2 hover:text-brand" href="#contact">Contact Us</a>
         </nav>
-
 
         <div className="hidden md:flex items-center gap-2">
           <a className="btn btn-primary gap-2" href="tel:+911204553111"><FaPhoneAlt /> +91 120 455 3111</a>
@@ -168,7 +172,7 @@ export default function Navbar() {
           <nav className="px-6 pb-8">
             <ul className="space-y-4 text-lg">
               <li><a href="/" onClick={() => setOpen(false)}>Home</a></li>
-              <li><a href="#about" onClick={() => setOpen(false)}>About</a></li>
+              <li><a href="/about" onClick={() => setOpen(false)}>About</a></li>
               <li>
                 <button
                   onClick={toggleProjects}
@@ -199,8 +203,8 @@ export default function Navbar() {
 
                       {openOngoing && (
                         <ul className="mt-2 space-y-2 pl-3 text-sm">
-                          <li><a href="/antilla-tower-1" onClick={() => setOpen(false)}>Antilla Tower 1<br />Sector 107 Noida</a></li>
-                          <li><a href="/silver-oak-tower" onClick={() => setOpen(false)}>Silver Oak Tower<br />Sector 104<br />near Sterling Mall</a></li>
+                          <li><a href="/projects/antilla-tower-1" onClick={() => setOpen(false)}>Antilla Tower 1<br />Sector 107 Noida</a></li>
+                          <li><a href="/projects/silver-oak-tower" onClick={() => setOpen(false)}>Silver Oak Tower<br />Sector 104<br />near Sterling Mall</a></li>
                         </ul>
                       )}
                     </div>
@@ -221,9 +225,14 @@ export default function Navbar() {
                       {openDelivered && (
                         <ul className="mt-2 space-y-2 pl-3 text-sm">
                           {/* Put delivered project links here */}
-                          <li><a href="/dream-height-1" onClick={() => setOpen(false)}>Dream Height 1</a></li>
+                          {/* <li><a href="/dream-height-1" onClick={() => setOpen(false)}>Dream Height 1</a></li>
                           <li><a href="/dream-height-2" onClick={() => setOpen(false)}>Dream Height 2</a></li>
-                          <li><a href="/dream-height-3" onClick={() => setOpen(false)}>Dream Height 3</a></li>
+                          <li><a href="/dream-height-3" onClick={() => setOpen(false)}>Dream Height 3</a></li> */}
+
+
+                          <li><p className="block px-2 py-1">Dream Height 1</p></li>
+                          <li><p className="block px-2 py-1">Dream Height 2</p></li>
+                          <li><p className="block px-2 py-1">Dream Height 3</p></li>
                         </ul>
                       )}
                     </div>
