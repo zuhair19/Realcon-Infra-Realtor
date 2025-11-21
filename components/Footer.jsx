@@ -9,10 +9,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-2">Navigation</h4>
             <ul className="[&>li]:leading-7">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a className="hover:text-brand" href="/">Home</a></li>
+              <li><a className="hover:text-brand" href="/about">About Us</a></li>
+              <li><a className="hover:text-brand">Gallery</a></li>
+              {/* <li><a href="#contact">Contact Us</a></li> */}
+              <li><button className="hover:text-brand" onClick={() => document.dispatchEvent(new CustomEvent('open-enquiry'))}>Enquire Now</button></li>
             </ul>
           </div>
 
@@ -20,17 +21,21 @@ export default function Footer() {
             <h4 className="font-bold mb-2">Useful Links</h4>
             <ul className="[&>li]:leading-7">
               {/* <li><a href="#blogs">Blogs</a></li> */}
-              <li><a href="#">Privacy Policy</a></li>
+              {/* <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Disclaimer</a></li> */}
+
+              <li><p className="hover:text-brand">Privacy Policy</p></li>
+              <li><p className="hover:text-brand">Terms & Conditions</p></li>
+              <li><p className="hover:text-brand">Disclaimer</p></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold mb-2">Ongoing Projects</h4>
             <ul className="[&>li]:leading-7">
-              <li><a href="/projects/antilla-tower-1">Antilla Tower 1</a></li>
-              <li><a href="/projects/silver-oak-tower">Silver Oak Tower</a></li>
+              <li><a className="hover:text-brand" href="/projects/antilla-tower-1">Antilla Tower 1</a></li>
+              <li><a className="hover:text-brand" href="/projects/silver-oak-tower">Silver Oak Tower</a></li>
             </ul>
             <h4 className="font-bold mt-3 mb-2">Delivered Projects</h4>
             <ul className="[&>li]:leading-7">
@@ -39,9 +44,9 @@ export default function Footer() {
               <li><a href="#projects">Dream Height 3</a></li> */}
 
 
-              <li><p>Dream Height 1</p></li>
-              <li><p>Dream Height 2</p></li>
-              <li><p>Dream Height 3</p></li>
+              <li><p className="hover:text-brand">Dream Height 1</p></li>
+              <li><p className="hover:text-brand">Dream Height 2</p></li>
+              <li><p className="hover:text-brand">Dream Height 3</p></li>
             </ul>
           </div>
 
@@ -57,9 +62,9 @@ export default function Footer() {
                 <FaPhoneAlt className="text-lg shrink-0" />
                 +91 120 455 3111
               </a><br />
-              <a href="mailto:info@realconinfrarealtors.com" className="inline-flex items-center gap-2 hover:text-blue-500 break-all">
+              <a href="mailto:info@realconinfra.in" className="inline-flex items-center gap-2 hover:text-blue-500 break-all">
                 <FaEnvelope className="text-lg shrink-0" />
-                info@realconinfrarealtors.com
+                info@realconinfra.in
               </a>
             </p>
           </div>

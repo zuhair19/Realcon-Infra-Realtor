@@ -2,9 +2,9 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Realcon Infra Realtor | Villas | Flats | Plots | Commercial',
-  description: 'Luxurious Villas / Residential Plots / Apartments / Commercial',
-  metadataBase: new URL('https://example.com')
+  title: 'Realcon Infra Realtor | Villas | Flats | Commercial',
+  description: 'Luxurious Villas / Apartments / Commercial',
+  metadataBase: new URL('https://realconinfra.in')
 };
 
 export default function RootLayout({ children }) {

@@ -9,7 +9,6 @@ import EnquiryModal from '@/components/EnquiryModal';
 import Footer from '@/components/Footer';
 import HomeLoanPartners from "@/components/HomeLoanPartners";
 import Mob_contact from '@/components/Mob_contact';
-import { Analytics } from "@vercel/analytics/next"
 import { useEffect } from 'react';
 
 export default function Page() {
@@ -26,7 +25,6 @@ export default function Page() {
 
   return (
     <>
-      <Analytics />
       <Navbar />
       <Hero />
       <section id="about" className="section">

@@ -70,9 +70,8 @@ export default function EnquiryModal(){
                 <label className="text-xs mb-1 block">Select Project</label>
                 <select className="w-full border rounded-lg px-3 py-2" value={form.project} onChange={e=>setForm({...form, project:e.target.value})}>
                   <option value="">-- Select Project --</option>
-                  <option value="project1">project1</option>
-                  <option value="project2">project2</option>
-                  <option value="project3">project3</option>
+                  <option value="project1">Antilla Tower</option>
+                  <option value="project2">Silver Oak Tower</option>
                 </select>
                 {errors.project && <div className="text-red-600 text-xs mt-1">{errors.project}</div>}
               </div>

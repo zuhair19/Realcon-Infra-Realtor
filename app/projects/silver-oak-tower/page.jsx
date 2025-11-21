@@ -2,12 +2,11 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Mob_contact from '@/components/Mob_contact';
-import { Analytics } from "@vercel/analytics/next";
+import EnquiryModal from '@/components/EnquiryModal';
 
 export default function Page() {
   return (
     <>
-      <Analytics />
       <Navbar />
 
       <main className="max-w-6xl mx-auto px-6 py-12">
@@ -146,6 +145,7 @@ export default function Page() {
       </main>
 
       <Mob_contact />
+      <EnquiryModal />
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react';
-import { FaPhoneAlt, FaInfoCircle } from "react-icons/fa";
+import { FaPhoneAlt, FaInfoCircle, FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar() {
   const [hide, setHide] = useState(false);
@@ -55,13 +55,33 @@ export default function Navbar() {
           <img className="h-16 md:h-20 object-contain" src="/images/logo.png" alt="Realcon Infra Realtor Logo" />
         </a>
 
-        {/* DESKTOP NAV (replace your existing md:flex nav with this) */}
         <nav className="hidden md:flex items-center gap-6 relative">
           <a className="py-2 hover:text-brand" href="/">Home</a>
-          <a className="py-2 hover:text-brand" href="/about">About</a>
+          <div className="relative group">
+            <button
+              className="py-2 flex items-center gap-1 hover:text-brand focus:outline-none"
+              aria-haspopup="true"
+              aria-expanded="false"
+              type="button"
+            >
+              <p>About</p>
+              <svg className="w-3 h-3 transform transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                <path d="M5 8l5 5 5-5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
 
-          {/* Projects with dropdown */}
-          {/* Projects with dropdown — desktop (replace prior desktop block) */}
+            <div className="absolute left-0 top-full mt-0 w-72 bg-white border rounded shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity z-50">
+              <div className="py-3">
+                <div className="px-4 py-2">
+                  <ul className="space-y-1 text-sm">
+                    <li><a className="block px-2 py-1 hover:text-brand" href="/about">Profile</a></li>
+                    <li><a className="block px-2 py-1 hover:text-brand" href="/managers-message">Manager's Message</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="relative group">
             <button
               className="py-2 flex items-center gap-1 hover:text-brand focus:outline-none"
@@ -75,7 +95,6 @@ export default function Navbar() {
               </svg>
             </button>
 
-            {/* dropdown — positioned directly under the button (no gap) */}
             <div className="absolute left-0 top-full mt-0 w-72 bg-white border rounded shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity z-50">
               <div className="py-3">
                 {/* Ongoing section */}
@@ -108,13 +127,15 @@ export default function Navbar() {
           </div>
 
 
-          <a className="py-2 hover:text-brand" href="#gallery">Gallery</a>
-          <a className="py-2 hover:text-brand" href="#contact">Contact Us</a>
+          <a className="py-2 hover:text-brand" >Gallery</a>
+          {/* <a className="py-2 hover:text-brand" href="#contact">Contact Us</a> */}
+          <button className="py-2 hover:text-brand" onClick={() => document.dispatchEvent(new CustomEvent('open-enquiry'))}>Enquire Now</button>
         </nav>
 
         <div className="hidden md:flex items-center gap-2">
+          <a className="text-3xl mr-2" href="https://api.whatsapp.com/send?phone=+919990378670&text=Hi, I would like to know more about your services." target="_blank"><FaWhatsapp /></a>
           <a className="btn btn-primary gap-2" href="tel:+911204553111"><FaPhoneAlt /> +91 120 455 3111</a>
-          <button className="btn" onClick={() => document.dispatchEvent(new CustomEvent('open-enquiry'))}>Enquire Now</button>
+          {/* <button className="btn" onClick={() => document.dispatchEvent(new CustomEvent('open-enquiry'))}>Enquire Now</button> */}
         </div>
 
         {/* Toggle button — 3 bars that animate to X */}
@@ -172,7 +193,8 @@ export default function Navbar() {
           <nav className="px-6 pb-8">
             <ul className="space-y-4 text-lg">
               <li><a href="/" onClick={() => setOpen(false)}>Home</a></li>
-              <li><a href="/about" onClick={() => setOpen(false)}>About</a></li>
+              <li><a href="/about" onClick={() => setOpen(false)}>Profile</a></li>
+              <li><a href="/managers-message" onClick={() => setOpen(false)}>Manager's Message</a></li>
               <li>
                 <button
                   onClick={toggleProjects}
@@ -239,10 +261,8 @@ export default function Navbar() {
                   </div>
                 )}
               </li>
-              <li><a href="#gallery" onClick={() => setOpen(false)}>Gallery</a></li>
-              <li><a href="#contact" onClick={() => setOpen(false)}>Contact</a></li>
-
-              {/* If you want nested dropdowns like Escons, paste your <ul class="dropdown"> markup here and we can wire small toggles */}
+              {/* <li><a href="#gallery" onClick={() => setOpen(false)}>Gallery</a></li> */}
+                <li>Gallery</li>
               <li>
                 <button
                   className="btn gap-2"

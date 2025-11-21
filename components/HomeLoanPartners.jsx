@@ -1,13 +1,12 @@
 "use client";
-import Image from "next/image";
 
 export default function HomeLoanPartners() {
   const partners = [
-    { name: "CanFin Homes", logo: "/images/canfin.png", href: "#" },
-    { name: "J&K Bank", logo: "/images/jkbank.png", href: "#" },
-    { name: "LIC HFL", logo: "/images/lic.png", href: "#" },
-    { name: "Bandhan Bank", logo: "/images/bandhan.png", href: "#" },
-    { name: "ICICI Bank", logo: "/images/icici.png", href: "#" },
+    { name: "CanFin Homes", logo: "/images/canfin.png" },
+    { name: "J&K Bank", logo: "/images/jkbank.png" },
+    { name: "LIC HFL", logo: "/images/lic.png" },
+    { name: "Bandhan Bank", logo: "/images/bandhan.png" },
+    { name: "ICICI Bank", logo: "/images/icici.png" },
   ];
 
   return (
@@ -25,60 +24,53 @@ export default function HomeLoanPartners() {
 
         <p className="max-w-3xl mx-auto text-gray-600 mb-8 px-4">
           For the convenience of clients, Realcon Infra Realtor has its
-          own Banking & Financial Assistance team, who assist buyers in planning
-          their loan amount and term, and help them choose the right financial
-          institution according to their monetary needs.
+          own Banking & Financial Assistance team, who assist buyers in
+          planning their loan amount and term, and help them choose the
+          right financial institution according to their monetary needs.
         </p>
 
-        {/* Responsive logos: use horizontal scroll on small screens, grid on md+ */}
         <div className="mx-2">
-          {/* Mobile: horizontal scroller */}
+          {/* Mobile: horizontal scroll */}
           <div
             className="flex gap-4 overflow-x-auto md:hidden py-2 px-2 snap-x snap-mandatory"
             role="list"
             aria-label="Home loan partners"
           >
             {partners.map((p, i) => (
-              <a
+              <div
                 key={i}
-                href={p.href}
                 className="snap-center flex-shrink-0 w-64 md:w-56 lg:w-48"
                 aria-label={p.name}
               >
                 <div className="bg-white rounded-2xl shadow-md p-6 flex items-center justify-center h-28">
-                  <Image
+                  <img
                     src={p.logo}
                     alt={p.name}
-                    width={220}
-                    height={80}
-                    className="object-contain"
+                    className="object-contain h-16"
                     loading="lazy"
                   />
                 </div>
-              </a>
+              </div>
             ))}
           </div>
 
-          {/* Tablet & Desktop: grid */}
+          {/* Desktop grid */}
           <div className="hidden md:grid md:grid-cols-3 lg:grid-cols-5 gap-6 items-center">
             {partners.map((p, i) => (
-              <a
+              <div
                 key={i}
-                href={p.href}
                 className="flex items-center justify-center"
                 aria-label={p.name}
               >
                 <div className="bg-white rounded-2xl shadow-md p-6 flex items-center justify-center w-full h-28">
-                  <Image
+                  <img
                     src={p.logo}
                     alt={p.name}
-                    width={220}
-                    height={80}
-                    className="object-contain"
+                    className="object-contain h-16"
                     loading="lazy"
                   />
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>

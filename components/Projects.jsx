@@ -34,27 +34,54 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {ongoing.map((item, idx) => (
+            // <Link
+            //   key={idx}
+            //   href={`/projects/${item.title.replace(/\s+/g, '-').toLowerCase()}`}
+            //   className="relative rounded-xl overflow-hidden shadow-md h-72 block"
+
+            //   data-aos="fade-up"
+            //   data-aos-delay={idx * 100}
+            // >
+            //   <img
+            //     src={item.img}
+            //     alt={item.title}
+            //     className="w-full h-full object-cover"
+            //   />
+
+            //   {/* Label using Tailwind only */}
+            //   <div className="absolute left-4 right-4 bottom-3">
+            //     <div className="bg-white/50 rounded-full shadow-lg px-5 py-3">
+            //       <h5 className="text-lg font-semibold text-center">{item.title}</h5>
+            //     </div>
+            //   </div>
+            // </Link>
+
             <Link
               key={idx}
               href={`/projects/${item.title.replace(/\s+/g, '-').toLowerCase()}`}
-              className="relative rounded-xl overflow-hidden shadow-md h-72 block"
-
+              className="relative rounded-2xl overflow-hidden shadow-lg h-72 block group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-700"
               />
 
-              {/* Label using Tailwind only */}
-              <div className="absolute left-4 right-4 bottom-3">
-                <div className="bg-white/50 rounded-full shadow-lg px-5 py-3">
-                  <h5 className="text-lg font-semibold text-center">{item.title}</h5>
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-80" />
+
+              {/* Label */}
+              <div className="absolute left-4 right-4 bottom-4">
+                <div className="backdrop-blur-md bg-white/40 border border-white/30 rounded-full shadow-xl px-5 py-3">
+                  <h5 className="text-lg font-semibold text-center text-gray-900 drop-shadow-md">
+                    {item.title}
+                  </h5>
                 </div>
               </div>
             </Link>
+
           ))}
         </div>
 
@@ -63,25 +90,51 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {delivered.map((item, idx) => (
+            // <div
+            //   key={idx}
+            //   className="relative rounded-xl overflow-hidden shadow-md h-64"
+            //   data-aos="fade-up"
+            //   data-aos-delay={idx * 100}
+            // >
+            //   <img
+            //     src={item.img}
+            //     alt={item.title}
+            //     className="w-full h-full object-cover"
+            //   />
+
+            //   {/* Label */}
+            //   <div className="absolute left-4 right-4 bottom-3">
+            //     <div className="bg-white/50 rounded-full shadow-md px-4 py-2 text-center">
+            //       <h6 className="text-md font-medium">{item.title}</h6>
+            //     </div>
+            //   </div>
+            // </div>
+
             <div
               key={idx}
-              className="relative rounded-xl overflow-hidden shadow-md h-64"
+              className="relative rounded-2xl overflow-hidden shadow-lg h-64 group transition-all duration-500 hover:shadow-2xl hover:-translate-y-1"
               data-aos="fade-up"
               data-aos-delay={idx * 100}
             >
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-700"
               />
 
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-80" />
+
               {/* Label */}
-              <div className="absolute left-4 right-4 bottom-3">
-                <div className="bg-white/50 rounded-full shadow-md px-4 py-2 text-center">
-                  <h6 className="text-md font-medium">{item.title}</h6>
+              <div className="absolute left-4 right-4 bottom-4">
+                <div className="backdrop-blur-md bg-white/40 border border-white/30 rounded-full shadow-xl px-4 py-2 text-center">
+                  <h6 className="text-md font-semibold text-gray-900 drop-shadow-sm">
+                    {item.title}
+                  </h6>
                 </div>
               </div>
             </div>
+
           ))}
         </div>
 
