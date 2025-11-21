@@ -11,9 +11,7 @@ export default function Page() {
     <>
       <Analytics />
       <Navbar />
-      <a href="/downloads/antilla-tower-1.pdf" className="block mt-4 text-center text-blue-500 hover:underline">
-        Download Brochure
-      </a>
+      <p>upcoming...., check silver oak</p>
       <Mob_contact />
       <Footer />
     </>
