@@ -1,8 +1,12 @@
-'use client'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Mob_contact from '@/components/Mob_contact';
 import EnquiryModal from '@/components/EnquiryModal';
+
+export const metadata = {
+  title: 'Antilla Tower Sector 107 | 3 & 4 BHK Apartments in Noida',
+  description: 'Discover Antilla Tower in Sector-107, Noida - a premium residential project offering spacious 3 & 4 BHK apartments in Alpha & Beta blocks. Explore modern amenities, quality finishes, and excellent connectivity. Download the brochure for detailed floor plans, specifications, and parking layout.',
+};
 
 export default function Page() {
   return (

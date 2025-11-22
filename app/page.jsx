@@ -1,4 +1,3 @@
-
 'use client'
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -50,9 +49,9 @@ export default function Page() {
       <Mob_contact />
 
       <button className="fixed right-4 bottom-14 md:bottom-6 rounded-full bg-black text-white w-11 h-11 shadow-lg" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>↑</button>
-      <section id="loan" className="section">
+      {/* <section id="loan" className="section">
         <HomeLoanPartners />
-      </section>
+      </section> */}
       <EnquiryModal />
       <Footer />
     </>

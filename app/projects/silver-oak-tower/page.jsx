@@ -1,8 +1,12 @@
-'use client'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Mob_contact from '@/components/Mob_contact';
 import EnquiryModal from '@/components/EnquiryModal';
+
+export const metadata = {
+  title: 'Silver Oak Tower Sector 104 | 3 & 4 BHK Apartments in Noida',
+  description: 'Explore Silver Oak Tower III in Sector-104, Noida (M-10, near Sterling Mall) - offering premium 3 & 4 BHK apartments with multiple unit sizes. Download the full brochure for detailed floor plans and specifications.',
+};
 
 export default function Page() {
   return (
@@ -15,7 +19,7 @@ export default function Page() {
           <div className="bg-black/50 p-10">
             <h1 className="text-3xl md:text-5xl font-bold text-white">Silver Oak Tower — Tower III</h1>
             <p className="mt-3 text-white/90 max-w-3xl">
-              Premium residential tower in Sector-104, Noida (M-10, near Sterling Mall). 1, 2, 3 & 4 BHK style layouts (multiple unit sizes).
+              Premium residential tower in Sector-104, Noida (M-10, near Sterling Mall). 3 & 4 BHK style layouts (multiple unit sizes).
               Full brochure and detailed floor plans are available for download.
             </p>
 

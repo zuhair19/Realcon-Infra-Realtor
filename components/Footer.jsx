@@ -11,7 +11,7 @@ export default function Footer() {
             <ul className="[&>li]:leading-7">
               <li><a className="hover:text-brand" href="/">Home</a></li>
               <li><a className="hover:text-brand" href="/about">About Us</a></li>
-              <li><a className="hover:text-brand">Gallery</a></li>
+              {/* <li><a className="hover:text-brand">Gallery</a></li> */}
               {/* <li><a href="#contact">Contact Us</a></li> */}
               <li><button className="hover:text-brand" onClick={() => document.dispatchEvent(new CustomEvent('open-enquiry'))}>Enquire Now</button></li>
             </ul>
@@ -44,9 +44,9 @@ export default function Footer() {
               <li><a href="#projects">Dream Height 3</a></li> */}
 
 
-              <li><p className="hover:text-brand">Dream Height 1</p></li>
-              <li><p className="hover:text-brand">Dream Height 2</p></li>
-              <li><p className="hover:text-brand">Dream Height 3</p></li>
+              <li><p className="hover:text-brand">Dream Heights 1</p></li>
+              <li><p className="hover:text-brand">Dream Heights 2</p></li>
+              <li><p className="hover:text-brand">Dream Heights 3</p></li>
             </ul>
           </div>
 

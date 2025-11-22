@@ -1,9 +1,13 @@
-'use client'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Mob_contact from '@/components/Mob_contact';
 import Counters from '@/components/Counters';
 import EnquiryModal from '@/components/EnquiryModal';
+
+export const metadata = {
+    title: 'About Us | Realcon Infra Realtor',
+    description: 'Learn more about Realcon Infra Realtor, a leading real estate company offering luxury villas, apartments, furnished flats, and commercial properties in Noida and Greater Noida. Discover our commitment to quality, customer satisfaction, and innovative real estate solutions.',
+};
 
 export default function Page() {
 

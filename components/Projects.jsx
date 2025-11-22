@@ -19,7 +19,7 @@ export default function Projects() {
   useEffect(() => { AOS.init({ once: true, duration: 700 }); }, []);
 
   return (
-    <section id="projects" className="section py-16">
+    <section id="projects" className="section py-16 mb-16">
       <div className="container-app">
 
         {/* Heading */}
