@@ -151,6 +151,7 @@ export default function EnquiryModal() {
                   <option value="">-- Select Project --</option>
                   <option value="Antilla Tower">Antilla Tower</option>
                   <option value="Silver Oak Tower">Silver Oak Tower</option>
+                  <option value="RS Residency">RS Residency</option>
                 </select>
                 {errors.project && <div className="text-red-600 text-xs mt-1">{errors.project}</div>}
               </div>

@@ -36,18 +36,14 @@ export default function Footer() {
             <ul className="[&>li]:leading-7">
               <li><a className="hover:text-brand" href="/projects/antilla-tower-1">Antilla Tower 1</a></li>
               <li><a className="hover:text-brand" href="/projects/silver-oak-tower">Silver Oak Tower</a></li>
+              <li><a className="hover:text-brand" href="/projects/rs-residency">RS Residency</a></li>
             </ul>
-            <h4 className="font-bold mt-3 mb-2">Delivered Projects</h4>
+            {/* <h4 className="font-bold mt-3 mb-2">Delivered Projects</h4>
             <ul className="[&>li]:leading-7">
-              {/* <li><a href="#projects">Dream Height 1</a></li>
-              <li><a href="#projects">Dream Height 2</a></li>
-              <li><a href="#projects">Dream Height 3</a></li> */}
-
-
               <li><p className="hover:text-brand">Dream Heights 1</p></li>
               <li><p className="hover:text-brand">Dream Heights 2</p></li>
               <li><p className="hover:text-brand">Dream Heights 3</p></li>
-            </ul>
+            </ul> */}
           </div>
 
           <div>

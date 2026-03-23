@@ -79,7 +79,8 @@ export default function Navbar() {
                   <div className="font-semibold text-sm mb-2">Ongoing Projects</div>
                   <ul className="space-y-1 text-sm">
                     <li><a className="block px-2 py-1 hover:text-brand" href="/projects/antilla-tower-1">Antilla Tower 1<br />Sector 107 Noida</a></li>
-                    <li><a className="block px-2 py-1 hover:text-brand" href="/projects/silver-oak-tower">Silver Oak Tower<br />Sector 104<br />near Sterling Mall</a></li>
+                    <li><a className="block px-2 py-1 hover:text-brand" href="/projects/silver-oak-tower">Silver Oak Tower<br />Sector 104</a></li>
+                    <li><a className="block px-2 py-1 hover:text-brand" href="/projects/rs-residency">RS Residency</a></li>
                   </ul>
                 </div>
 
@@ -202,7 +203,8 @@ export default function Navbar() {
                       {openOngoing && (
                         <ul className="mt-2 space-y-2 pl-3 text-sm">
                           <li><a href="/projects/antilla-tower-1" onClick={() => setOpen(false)}>Antilla Tower 1<br />Sector 107 Noida</a></li>
-                          <li><a href="/projects/silver-oak-tower" onClick={() => setOpen(false)}>Silver Oak Tower<br />Sector 104<br />near Sterling Mall</a></li>
+                          <li><a href="/projects/silver-oak-tower" onClick={() => setOpen(false)}>Silver Oak Tower<br />Sector 104</a></li>
+                          <li><a href="/projects/rs-residency" onClick={() => setOpen(false)}>RS Residency</a></li>
                         </ul>
                       )}
                     </div>

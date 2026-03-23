@@ -7,6 +7,7 @@ import Link from 'next/link';
 const ongoing = [
   { title: 'Silver Oak Tower', img: '/images/silver-3.jpg' },
   { title: 'Antilla Tower 1', img: '/images/antilla-1.jpg' },
+  { title: 'RS Residency', img: '/images/rs-residency.jpg' },
 ];
 
 const delivered = [
@@ -32,7 +33,8 @@ export default function Projects() {
         {/* Ongoing Projects */}
         <h4 className="text-lg font-semibold mb-4">Ongoing Projects</h4>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"> */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
           {ongoing.map((item, idx) => (
             // <Link
             //   key={idx}
@@ -73,8 +75,15 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-80" />
 
               {/* Label */}
-              <div className="absolute left-4 right-4 bottom-4">
+              {/* <div className="absolute left-4 right-4 bottom-4">
                 <div className="backdrop-blur-md bg-white/40 border border-white/30 rounded-full shadow-xl px-5 py-3">
+                  <h5 className="text-lg font-semibold text-center text-gray-900 drop-shadow-md">
+                    {item.title}
+                  </h5>
+                </div>
+              </div> */}
+              <div className="absolute left-4 right-4 bottom-4 flex justify-center">
+                <div className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-white/2.5 border border-white/50 backdrop-blur-sm shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] hover:bg-white/30 transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none antialiased">
                   <h5 className="text-lg font-semibold text-center text-gray-900 drop-shadow-md">
                     {item.title}
                   </h5>
@@ -126,11 +135,11 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-80" />
 
               {/* Label */}
-              <div className="absolute left-4 right-4 bottom-4">
-                <div className="backdrop-blur-md bg-white/40 border border-white/30 rounded-full shadow-xl px-4 py-2 text-center">
-                  <h6 className="text-md font-semibold text-gray-900 drop-shadow-sm">
+              <div className="absolute left-4 right-4 bottom-4 flex justify-center">
+                <div className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-white/2.5 border border-white/50 backdrop-blur-sm shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] hover:bg-white/30 transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none antialiased">
+                  <h5 className="text-lg font-semibold text-center text-gray-900 drop-shadow-md">
                     {item.title}
-                  </h6>
+                  </h5>
                 </div>
               </div>
             </div>
