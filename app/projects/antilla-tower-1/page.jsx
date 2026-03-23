@@ -53,7 +53,7 @@ export default function Page() {
         {/* AMENITIES */}
         <section className="mt-8">
           <h2 className="text-2xl font-semibold mb-4">Project Amenities</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             <div className="p-4 border rounded shadow-sm text-center">
               <img src="/images/parking.png" alt="parking" className="mx-auto mb-2 w-14 h-14" />
               <h4 className="font-medium">Ample Parking</h4>
