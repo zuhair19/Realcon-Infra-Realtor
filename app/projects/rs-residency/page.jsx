@@ -160,19 +160,48 @@
 //   );
 // }
 
-
+"use client"
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Mob_contact from '@/components/Mob_contact';
 import EnquiryModal from '@/components/EnquiryModal';
+import { useState } from "react";
+import ConfigSection from '@/components/ConfigSection';
 
-export const metadata = {
-  title: 'RS Residency | 1 & 2 BHK Apartments by Realcon',
-  description:
-    'Discover RS Residency by Realcon Infra Realtors offering well-designed 1 & 2 BHK apartments with smart layouts and modern living. Explore floor plans, configurations and download brochure.',
-};
+// export const metadata = {
+//   title: 'RS Residency | 1 & 2 BHK Apartments by Realcon',
+//   description:
+//     'Discover RS Residency by Realcon Infra Realtors offering well-designed 1 & 2 BHK apartments with smart layouts and modern living. Explore floor plans, configurations and download brochure.',
+// };
 
 export default function Page() {
+  const configs = [
+    {
+      title: "1 BHK - 640 Sq.ft.",
+      unit: "Unit 1",
+      image: "/images/1bhk-640.png",
+      features: ["Spacious layout", "Wide balcony", "Smart design"],
+    },
+    {
+      title: "1 BHK - 560 Sq.ft.",
+      unit: "Unit 2 & 3",
+      image: "/images/1bhk-560.png",
+      features: ["Compact & efficient", "Budget-friendly", "Ideal for individuals"],
+    },
+    {
+      title: "2 BHK - 1040 Sq.ft.",
+      unit: "Unit 4",
+      image: "/images/2bhk-1040.png",
+      features: ["Large living area", "Premium layout", "Family-friendly"],
+    },
+    {
+      title: "2 BHK - 950 Sq.ft.",
+      unit: "Unit 5",
+      image: "/images/2bhk-950.png",
+      features: ["Balanced size", "Functional design", "Good ventilation"],
+    },
+  ];
+  const [selectedPlan, setSelectedPlan] = useState(null);
   return (
     <>
       <Navbar />
@@ -262,7 +291,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* CONFIGURATIONS */}
+        {/* CONFIGURATIONS
         <section className="mt-10">
           <h2 className="text-2xl font-semibold mb-4">Configurations & Sizes</h2>
 
@@ -304,8 +333,121 @@ export default function Page() {
           <p className="mt-3 text-sm text-gray-600">
             Note: Contact us for pricing and availability.
           </p>
-        </section>
+        </section> */}
 
+        {/* CONFIGURATIONS */}
+        {/* <section className="mt-10">
+          <h2 className="text-2xl font-semibold mb-6">Explore Our Apartments</h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+
+            
+            <div className="border rounded-xl overflow-hidden shadow hover:shadow-lg hover:scale-[1.02] transition duration-300">
+              <img
+                src="/images/1bhk-640.png"
+                className="w-full h-auto"
+                alt="1 BHK 640 sqft"
+              />
+
+              <div className="p-5">
+                <h3 className="text-lg font-semibold">1 BHK - 640 Sq.ft.</h3>
+
+                <p className="text-sm text-gray-500 mt-1">Unit 1</p>
+
+                <ul className="text-sm text-gray-600 mt-3 space-y-1">
+                  <li>• Spacious layout</li>
+                  <li>• Wide balcony</li>
+                  <li>• Smart space utilization</li>
+                </ul>
+
+                <button
+                  onClick={() => setSelectedPlan("/images/1bhk-640.png")}
+                  className="mt-4 w-full bg-brand hover:bg-blue-700 text-white py-2 rounded-md"
+                >
+                  View Floor Plan
+                </button>
+              </div>
+            </div>
+
+            <div className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300">
+              <img
+                src="/images/1bhk-560.png"
+                className="w-full h-auto"
+                alt="1 BHK 560 sqft"
+              />
+
+              <div className="p-5">
+                <h3 className="text-lg font-semibold">1 BHK - 560 Sq.ft.</h3>
+
+                <p className="text-sm text-gray-500 mt-1">Unit 2 & 3</p>
+
+                <ul className="text-sm text-gray-600 mt-3 space-y-1">
+                  <li>• Compact & efficient</li>
+                  <li>• Budget-friendly option</li>
+                  <li>• Ideal for individuals</li>
+                </ul>
+
+                <button className="mt-4 w-full bg-brand hover:bg-blue-700 text-white py-2 rounded-md">
+                  View Floor Plan
+                </button>
+              </div>
+            </div>
+
+            <div className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300">
+              <img
+                src="/images/2bhk-1040.png"
+                className="w-full h-auto"
+                alt="2 BHK 1040 sqft"
+              />
+
+              <div className="p-5">
+                <h3 className="text-lg font-semibold">2 BHK - 1040 Sq.ft.</h3>
+
+                <p className="text-sm text-gray-500 mt-1">Unit 4</p>
+
+                <ul className="text-sm text-gray-600 mt-3 space-y-1">
+                  <li>• Large living area</li>
+                  <li>• Premium layout</li>
+                  <li>• Perfect for families</li>
+                </ul>
+
+                <button className="mt-4 w-full bg-brand hover:bg-blue-700 text-white py-2 rounded-md">
+                  View Floor Plan
+                </button>
+              </div>
+            </div>
+
+            <div className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300">
+              <img
+                src="/images/2bhk-950.png"
+                className="w-full h-auto"
+                alt="2 BHK 950 sqft"
+              />
+
+              <div className="p-5">
+                <h3 className="text-lg font-semibold">2 BHK - 950 Sq.ft.</h3>
+
+                <p className="text-sm text-gray-500 mt-1">Unit 5</p>
+
+                <ul className="text-sm text-gray-600 mt-3 space-y-1">
+                  <li>• Balanced space & cost</li>
+                  <li>• Functional design</li>
+                  <li>• Family-friendly layout</li>
+                </ul>
+
+                <button className="mt-4 w-full bg-brand hover:bg-blue-700 text-white py-2 rounded-md">
+                  View Floor Plan
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <p className="mt-4 text-sm text-gray-500">
+            *Click on "View Floor Plan" to explore detailed layouts.
+          </p>
+        </section> */}
+        <ConfigSection configs={configs} />
         {/* FLOOR PLANS */}
         <section className="mt-10">
           <h2 className="text-2xl font-semibold mb-3">Floor Plans</h2>
@@ -336,7 +478,29 @@ export default function Page() {
             <li>Well-planned cluster layout with 5 units per floor.</li>
           </ul>
         </section>
+        {selectedPlan && (
+          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
 
+            <div className="bg-white rounded-lg max-w-3xl w-full p-4 relative">
+
+              {/* Close button */}
+              <button
+                onClick={() => setSelectedPlan(null)}
+                className="absolute top-2 right-3 text-xl font-bold"
+              >
+                ✕
+              </button>
+
+              {/* Image */}
+              <img
+                src={selectedPlan}
+                className="w-full max-h-[80vh] object-contain"
+                alt="Floor Plan"
+              />
+
+            </div>
+          </div>
+        )}
       </main>
 
       <Mob_contact />
