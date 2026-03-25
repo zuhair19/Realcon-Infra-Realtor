@@ -3,10 +3,10 @@
 // import Mob_contact from '@/components/Mob_contact';
 // import EnquiryModal from '@/components/EnquiryModal';
 
-// export const metadata = {
-//   title: 'Antilla Tower Sector 107 | 3 & 4 BHK Apartments in Noida',
-//   description: 'Discover Antilla Tower in Sector-107, Noida - a premium residential project offering spacious 3 & 4 BHK apartments in Alpha & Beta blocks. Explore modern amenities, quality finishes, and excellent connectivity. Download the brochure for detailed floor plans, specifications, and parking layout.',
-// };
+export const metadata = {
+  title: 'Antilla Tower Sector 107 | 3 & 4 BHK Apartments in Noida',
+  description: 'Discover Antilla Tower in Sector-107, Noida - a premium residential project offering spacious 3 & 4 BHK apartments in Alpha & Beta blocks. Explore modern amenities, quality finishes, and excellent connectivity. Download the brochure for detailed floor plans, specifications, and parking layout.',
+};
 
 // export default function Page() {
 //   return (
@@ -160,12 +160,12 @@
 //   );
 // }
 
-"use client"
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Mob_contact from '@/components/Mob_contact';
 import EnquiryModal from '@/components/EnquiryModal';
-import { useState } from "react";
+
 import ConfigSection from '@/components/ConfigSection';
 
 // export const metadata = {
@@ -201,7 +201,6 @@ export default function Page() {
       features: ["Balanced size", "Functional design", "Good ventilation"],
     },
   ];
-  const [selectedPlan, setSelectedPlan] = useState(null);
   return (
     <>
       <Navbar />
@@ -235,7 +234,13 @@ export default function Page() {
 
               <a
                 href="tel:+911204553111"
-                className="inline-block bg-brand hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-md shadow"
+                className="md:hidden inline-block bg-brand hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-md shadow"
+              >
+                Connect With Us
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=+919990378670&text=Hi, I would like to know more about your services."
+                target="_blank" className="hidden md:block bg-brand hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-md shadow"
               >
                 Connect With Us
               </a>
@@ -478,29 +483,6 @@ export default function Page() {
             <li>Well-planned cluster layout with 5 units per floor.</li>
           </ul>
         </section>
-        {selectedPlan && (
-          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-
-            <div className="bg-white rounded-lg max-w-3xl w-full p-4 relative">
-
-              {/* Close button */}
-              <button
-                onClick={() => setSelectedPlan(null)}
-                className="absolute top-2 right-3 text-xl font-bold"
-              >
-                ✕
-              </button>
-
-              {/* Image */}
-              <img
-                src={selectedPlan}
-                className="w-full max-h-[80vh] object-contain"
-                alt="Floor Plan"
-              />
-
-            </div>
-          </div>
-        )}
       </main>
 
       <Mob_contact />
