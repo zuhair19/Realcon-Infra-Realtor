@@ -82,12 +82,21 @@ export default function Projects() {
                   </h5>
                 </div>
               </div> */}
-              <div className="absolute left-4 right-4 bottom-4 flex justify-center">
+              {/* <div className="absolute left-4 right-4 bottom-4 flex justify-center">
                 <div className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-white/2.5 border border-white/50 backdrop-blur-sm shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] hover:bg-white/30 transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none antialiased">
-                  <h5 className="text-lg font-semibold text-center text-gray-900 drop-shadow-md">
+                  <h5 className="text-lg font-semibold text-center text-white/70 drop-shadow-md">
                     {item.title}
                   </h5>
                 </div>
+              </div> */}
+              <div className="absolute left-4 right-4 bottom-4 flex justify-center">
+                <button
+                  className="relative inline-flex items-center justify-center px-5 py-3 rounded-full bg-white/2.5 border border-white/50 backdrop-blur-sm shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] hover:bg-white/30 transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none antialiased"
+                >
+                  <h5 className="text-lg font-semibold text-center text-white/70 drop-shadow-md">
+                    {item.title}
+                  </h5>
+                </button>
               </div>
             </Link>
 
@@ -136,11 +145,13 @@ export default function Projects() {
 
               {/* Label */}
               <div className="absolute left-4 right-4 bottom-4 flex justify-center">
-                <div className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-white/2.5 border border-white/50 backdrop-blur-sm shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] hover:bg-white/30 transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none antialiased">
-                  <h5 className="text-lg font-semibold text-center text-gray-900 drop-shadow-md">
+                <button
+                  className="relative inline-flex items-center justify-center px-5 py-3 rounded-full bg-white/2.5 border border-white/50 backdrop-blur-sm shadow-[inset_0_1px_0px_rgba(255,255,255,0.75),0_0_9px_rgba(0,0,0,0.2),0_3px_8px_rgba(0,0,0,0.15)] hover:bg-white/30 transition-all duration-300 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-white/60 before:via-transparent before:to-transparent before:opacity-70 before:pointer-events-none after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-tl after:from-white/30 after:via-transparent after:to-transparent after:opacity-50 after:pointer-events-none antialiased"
+                >
+                  <h5 className="text-lg font-semibold text-center text-white/70 drop-shadow-md">
                     {item.title}
                   </h5>
-                </div>
+                </button>
               </div>
             </div>
 
