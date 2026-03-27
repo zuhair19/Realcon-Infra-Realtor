@@ -3,10 +3,10 @@
 // import Mob_contact from '@/components/Mob_contact';
 // import EnquiryModal from '@/components/EnquiryModal';
 
-export const metadata = {
-  title: 'Antilla Tower Sector 107 | 3 & 4 BHK Apartments in Noida',
-  description: 'Discover Antilla Tower in Sector-107, Noida - a premium residential project offering spacious 3 & 4 BHK apartments in Alpha & Beta blocks. Explore modern amenities, quality finishes, and excellent connectivity. Download the brochure for detailed floor plans, specifications, and parking layout.',
-};
+// export const metadata = {
+//   title: 'Antilla Tower Sector 107 | 3 & 4 BHK Apartments in Noida',
+//   description: 'Discover Antilla Tower in Sector-107, Noida - a premium residential project offering spacious 3 & 4 BHK apartments in Alpha & Beta blocks. Explore modern amenities, quality finishes, and excellent connectivity. Download the brochure for detailed floor plans, specifications, and parking layout.',
+// };
 
 // export default function Page() {
 //   return (
@@ -168,11 +168,11 @@ import EnquiryModal from '@/components/EnquiryModal';
 
 import ConfigSection from '@/components/ConfigSection';
 
-// export const metadata = {
-//   title: 'RS Residency | 1 & 2 BHK Apartments by Realcon',
-//   description:
-//     'Discover RS Residency by Realcon Infra Realtors offering well-designed 1 & 2 BHK apartments with smart layouts and modern living. Explore floor plans, configurations and download brochure.',
-// };
+export const metadata = {
+  title: 'RS Residency | 1 & 2 BHK Apartments by Realcon',
+  description:
+    'Discover RS Residency by Realcon Infra Realtors offering well-designed 1 & 2 BHK apartments with smart layouts and modern living. Explore floor plans, configurations and download brochure.',
+};
 
 export default function Page() {
   const configs = [
